@@ -148,7 +148,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>AAA=</data>
+				<data>AA==</data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -178,7 +178,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>AAA=</data>
+				<data>AA==</data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -208,7 +208,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>AAA=</data>
+				<data>AA==</data>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -312,7 +312,7 @@
 			<key>ResizeAppleGpuBars</key>
 			<integer>-1</integer>
 			<key>SetupVirtualMap</key>
-			<true/>
+			<false/>
 			<key>SignalAppleOS</key>
 			<false/>
 			<key>SyncRuntimePermissions</key>
