@@ -874,31 +874,13 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>BrcmFirmwareData.kext</string>
+				<string>BrcmBluetoothInjector.kext</string>
 				<key>Comment</key>
 				<string>v2.6.7</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/BrcmFirmwareData</string>
-				<key>MaxKernel</key>
 				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>BrcmPatchRAM3.kext</string>
-				<key>Comment</key>
-				<string>v2.6.7</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/BrcmPatchRAM3</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
