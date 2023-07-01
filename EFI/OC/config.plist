@@ -465,7 +465,7 @@
 				<key>BundlePath</key>
 				<string>NootedRed.kext</string>
 				<key>Comment</key>
-				<string>v1.0.0-CI#948</string>
+				<string>v1.0.0#957</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
