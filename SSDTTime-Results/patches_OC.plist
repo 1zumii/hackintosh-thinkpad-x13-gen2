@@ -32,11 +32,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT to disable USB RHUB/HUBN/URTH and rename devices</string>
+				<string>Redefines modern CPU Devices as legacy Processor objects and sets plugin-type to 1 on the first</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-USB-Reset.aml</string>
+				<string>SSDT-PLUG-ALT.aml</string>
 			</dict>
 		</array>
 		<key>Patch</key>
