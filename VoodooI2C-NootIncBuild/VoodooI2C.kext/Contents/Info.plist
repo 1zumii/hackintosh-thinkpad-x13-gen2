@@ -3,41 +3,43 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19F101</string>
+	<string>22F82</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>VoodooSMBus</string>
+	<string>VoodooI2C</string>
 	<key>CFBundleIdentifier</key>
-	<string>de.leo-labs.VoodooSMBus</string>
+	<string>com.alexandred.VoodooI2C</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>VoodooSMBus</string>
+	<string>VoodooI2C</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2</string>
+	<string>2.8</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.2</string>
+	<string>2.8</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>10G8</string>
+	<string></string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>13.3</string>
 	<key>DTSDKBuild</key>
-	<string>18G74</string>
+	<string>22E245</string>
 	<key>DTSDKName</key>
-	<string>macosx10.14</string>
+	<string>macosx13.3</string>
 	<key>DTXcode</key>
-	<string>1030</string>
+	<string>1431</string>
 	<key>DTXcodeBuild</key>
-	<string>10G8</string>
+	<string>14E300c</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>Custom MT2 Personality</key>
@@ -482,36 +484,10 @@
 			<key>VendorID</key>
 			<integer>1452</integer>
 		</dict>
-		<key>ELANTouchpadDriver</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>de.leo-labs.VoodooSMBus</string>
-			<key>Configuration</key>
-			<dict>
-				<key>DisableWhileTrackpoint</key>
-				<true/>
-				<key>DisableWhileTrackpointTimeoutMs</key>
-				<string>500</string>
-				<key>DisableWhileTyping</key>
-				<true/>
-				<key>DisableWhileTypingTimeoutMs</key>
-				<integer>400</integer>
-				<key>IgnoreSetTouchpadStatus</key>
-				<false/>
-			</dict>
-			<key>IOClass</key>
-			<string>ELANTouchpadDriver</string>
-			<key>IOProbeScore</key>
-			<integer>400</integer>
-			<key>IOProviderClass</key>
-			<string>VoodooSMBusDeviceNub</string>
-			<key>RM,deliverNotifications</key>
-			<true/>
-		</dict>
 		<key>Native Multitouch Engine</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>de.leo-labs.VoodooSMBus</string>
+			<string>com.alexandred.VoodooI2C</string>
 			<key>IOClass</key>
 			<string>VoodooI2CNativeEngine</string>
 			<key>IOMatchCategory</key>
@@ -519,51 +495,109 @@
 			<key>IOProviderClass</key>
 			<string>VoodooI2CMultitouchInterface</string>
 		</dict>
-		<key>VoodooSMBusControllerDriver</key>
+		<key>VoodooI2CACPIController</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>de.leo-labs.VoodooSMBus</string>
+			<string>com.alexandred.VoodooI2C</string>
 			<key>IOClass</key>
-			<string>VoodooSMBusControllerDriver</string>
-			<key>IOPCIMatch</key>
-			<string>0x9d238086 0xa3238086</string>
-			<key>IOPCIMatchComment</key>
-			<string>Intel SMBus Controller i80 (9d23: Sunrise Point-LP (PCH), a323: Cannon Lake-H (PCH))</string>
+			<string>VoodooI2CACPIController</string>
+			<key>IONameMatch</key>
+			<array>
+				<string>INT33C2</string>
+				<string>INT33C3</string>
+				<string>INT3432</string>
+				<string>INT3433</string>
+			</array>
 			<key>IOProbeScore</key>
-			<integer>400</integer>
+			<integer>9999</integer>
+			<key>IOProviderClass</key>
+			<string>IOService</string>
+		</dict>
+		<key>VoodooI2CACPIControllerAMD</key>
+		<dict>
+			<key>AccessIntrMaskWorkaround</key>
+			<true/>
+			<key>CFBundleIdentifier</key>
+			<string>com.alexandred.VoodooI2C</string>
+			<key>IOClass</key>
+			<string>VoodooI2CACPIController</string>
+			<key>IONameMatch</key>
+			<array>
+				<string>AMD0010</string>
+				<string>AMDI0010</string>
+				<string>AMDI0510</string>
+			</array>
+			<key>IOProbeScore</key>
+			<integer>9999</integer>
+			<key>IOProviderClass</key>
+			<string>IOService</string>
+		</dict>
+		<key>VoodooI2CControllerDriver</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.alexandred.VoodooI2C</string>
+			<key>IOClass</key>
+			<string>VoodooI2CControllerDriver</string>
+			<key>IOProbeScore</key>
+			<integer>9999</integer>
+			<key>IOProviderClass</key>
+			<string>VoodooI2CControllerNub</string>
+		</dict>
+		<key>VoodooI2CPCIController</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.alexandred.VoodooI2C</string>
+			<key>IOClass</key>
+			<string>VoodooI2CPCIController</string>
+			<key>IOPCIMatch</key>
+			<string>0x9d608086&amp;0xFFFCFFFF 0xa1608086&amp;0xFFFCFFFF 0x9de88086&amp;0xFFFCFFFF 0xa3688086&amp;0xFFFCFFFF</string>
+			<key>IOProbeScore</key>
+			<integer>9999</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
 		</dict>
-		<key>VoodooSMBusIntelLpssI2C</key>
+		<key>VoodooI2CPCILakeController</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>de.leo-labs.VoodooSMBus</string>
+			<string>com.alexandred.VoodooI2C</string>
 			<key>IOClass</key>
-			<string>VoodooSMBusIntelLpssI2C</string>
+			<string>VoodooI2CPCILakeController</string>
 			<key>IOPCIMatch</key>
-			<string>0x9d608086</string>
-			<key>IOPCIMatchComment</key>
-			<string>Dummy IntelLpssI2CDriver</string>
+			<string>0x06e88086&amp;0xFFFCFFFF 0x02e88086&amp;0xFFFCFFFF 0x34e88086&amp;0xFFFCFFFF</string>
 			<key>IOProbeScore</key>
-			<integer>400</integer>
+			<integer>9999</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
 		</dict>
 	</dict>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.11</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2019 leo-labs. All rights reserved.</string>
+	<string>Copyright © 2020 Alexandre Daoud. All rights reserved.</string>
+	<key>OSBundleCompatibleVersion</key>
+	<string>2.0.0</string>
 	<key>OSBundleLibraries</key>
 	<dict>
+		<key>com.alexandred.VoodooI2CServices</key>
+		<string>1.0</string>
+		<key>com.apple.iokit.IOACPIFamily</key>
+		<string>1.4</string>
 		<key>com.apple.iokit.IOHIDFamily</key>
 		<string>2.0</string>
 		<key>com.apple.iokit.IOPCIFamily</key>
 		<string>2.9</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>8.0</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>18.5</string>
+		<string>14</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>18.5</string>
+		<string>14</string>
 		<key>com.apple.kpi.mach</key>
-		<string>18.5</string>
+		<string>14</string>
+		<key>org.coolstar.VoodooGPIO</key>
+		<string>1.1</string>
 	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
 </dict>
 </plist>
