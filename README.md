@@ -2,6 +2,8 @@
 [![](https://img.shields.io/badge/macOS-Ventura_13.4.1-orange.svg)](https://www.apple.com/macos/ventura/)
 [![](https://img.shields.io/badge/OpenCore-0.9.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 
+<img src="./docs/about-this-mac.jpg" style="height: 50vh" />
+
 ## ⚙️ 硬件规格
 
 [产品规格](https://www.lap4worx.de/media/pdf/dd/a6/cd/Lenovo-ThinkPad-X13-Gen-2-AMD-Spezifikationen.pdf)
