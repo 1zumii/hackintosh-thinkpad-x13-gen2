@@ -1,6 +1,7 @@
-# Hackintosh for Thinkpad X13 Gen 2 Ryzen 5600U
+# Hackintosh EFI for ThinkPad X13 Gen 2 Ryzen 5600U
 [![](https://img.shields.io/badge/macOS-Ventura_13.4.1-orange.svg)](https://www.apple.com/macos/ventura/)
 [![](https://img.shields.io/badge/OpenCore-0.9.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![](https://img.shields.io/badge/translation-english-green.svg)](./docs/README_EN.md)
 
 <img src="./docs/about-this-mac.jpg" style="height: 50vh" />
 
@@ -27,7 +28,7 @@
 | 摄像头      | ❌                      |
 | Fn 功能     | ✅ 亮度、音量调节支持   |
 | USB、Type-C | ✅ 支持供电、外接显示器 |
-| 睡眠        | ⚠️ 未测试               |
+| 睡眠        | ✅ S0                   |
 | HDMI        | ⚠️ 未测试               |
 
 ## 🔧 需要自己生成的
@@ -60,13 +61,13 @@
 ### 硬件加速
 
 - 截止目前所使用的 [NootedRed](https://github.com/NootInc/NootedRed/actions/runs/5425999871) 版本（CI\#957）还未支持硬件加速
-- Chrome、VS Code 都需要关闭硬件加速的设置
+- Chrome、VS Code 都需要关闭硬件加速的设置（[参考](https://nootinc.github.io/nred#chrome-chromium-based-browsers-and-apps-like-sublime-text-cause-graphical-artefacts-amongst-other-problems)）
 - 视频播放可以使用 Safari
 
 ### BIOS 设置
 
 - 关闭 Secure Boot
-- 设置显存大小：Config → Display → UMA Frame buffer Size（大小参见 NootedRed）
+- 设置显存大小：Config → Display → UMA Frame buffer Size（大小参见 [NootedRed](https://nootinc.github.io/nred)）
 
 ### 安装过程
 
@@ -87,6 +88,10 @@
 
 - 目前 Fn 键配合 Fn 区按键正常使用：Fn + F12、亮度调节、音量调节
 - 但单独按下 Fn 键，无法触发功能（如：按下时「显示符号与表情」，但可以使用 Cmd + Ctrl + Space 的快捷键替代）
+
+### 修复睡眠
+
+- 使用 Hackintool 可以将 `hibernatemode` 和 `proximitywake` 设置成 0
 
 ## 🔫 TroubleShooting
 
